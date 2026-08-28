@@ -3,53 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vedant Chinchekar — Video Editor & Visual Storyteller</title>
-<meta name="description" content="Vedant Chinchekar — Video Editor, Content Creator & Visual Storyteller.">
+<title>Vedant Chinchekar — Video Editor & Visual Designer</title>
+<meta name="description" content="Vedant Chinchekar — Video Editor and Visual Designer based in Pune. Explore video editing, motion graphics, and design work.">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root{--ink:#0b0d0d;--paper:#f1efe9;--muted:#9b9c96;--line:rgba(241,239,233,.14);--acid:#d7f36b;--blue:#9ed8ff}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:#090909;color:#f4f1eb;font-family:'DM Sans',sans-serif;line-height:1.5}
+body{background:var(--ink);color:var(--paper);font-family:'DM Sans',sans-serif;line-height:1.5}
 a{color:inherit;text-decoration:none}
 .container{width:min(1180px,92%);margin:auto}
-nav{position:fixed;top:0;left:0;width:100%;z-index:20;padding:22px 0;background:linear-gradient(#090909,transparent);transition:.3s}
+nav{position:fixed;top:0;left:0;width:100%;z-index:20;padding:22px 0;background:linear-gradient(var(--ink),rgba(11,13,13,.82),transparent);transition:.3s}
 .navin{display:flex;justify-content:space-between;align-items:center}
-.logo{font-family:'Space Grotesk';font-weight:700;letter-spacing:-.04em;font-size:20px}
-.navlinks{display:flex;gap:28px;font-size:13px;color:#aaa}
+.logo{font-family:'Space Grotesk';font-weight:700;letter-spacing:-.04em;font-size:20px}.logo span{color:var(--acid)}
+.navlinks{display:flex;gap:28px;font-size:13px;color:#aaa;align-items:center}
 .navlinks a:hover{color:#fff}
-.hero{min-height:92vh;display:flex;align-items:center;padding-top:100px;position:relative;overflow:hidden}
-.hero:after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-180px;top:80px;background:radial-gradient(circle,#34312b 0%,transparent 65%);opacity:.45;filter:blur(10px)}
+.nav-cta{border:1px solid var(--line);padding:9px 14px;border-radius:3px;color:var(--paper)!important}.nav-cta:hover{border-color:var(--acid)}
+.hero{min-height:92vh;display:flex;align-items:center;padding-top:100px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero:before{content:"01 / 2026";position:absolute;right:0;top:170px;color:#555;font-size:11px;letter-spacing:.18em;transform:rotate(90deg);transform-origin:right top}
+.hero:after{content:"";position:absolute;width:540px;height:540px;border-radius:50%;right:-160px;top:100px;background:radial-gradient(circle,rgba(158,216,255,.22) 0%,transparent 66%);opacity:.8;filter:blur(2px);pointer-events:none}
+.hero-content{position:relative;z-index:1}.hero-bottom{display:flex;align-items:center;gap:28px;margin-top:46px}.availability{font-size:11px;color:#989b96;letter-spacing:.1em;text-transform:uppercase}.availability b{color:var(--acid);font-weight:500}
 .kicker{font-size:12px;text-transform:uppercase;letter-spacing:.22em;color:#9b978f;margin-bottom:25px}
 h1{font-family:'Space Grotesk';font-size:clamp(54px,9vw,118px);line-height:.88;letter-spacing:-.065em;max-width:950px}
 h1 span{color:#8e8a82}
 .hero p{max-width:560px;color:#aaa;margin:32px 0;font-size:18px}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 20px;border:1px solid #454545;border-radius:100px;font-size:14px;background:#f4f1eb;color:#111;font-weight:600;transition:.25s}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 20px;border:1px solid #454545;border-radius:3px;font-size:14px;background:var(--acid);color:#111;font-weight:600;transition:.25s}
 .btn:hover{transform:translateY(-2px);background:#fff}
 .btn.dark{background:transparent;color:#eee}
 section{padding:110px 0}
 .section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:35px}
 .eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#777}
 h2{font-family:'Space Grotesk';font-size:clamp(38px,5vw,64px);letter-spacing:-.05em}
-.workgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.workgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card:nth-child(n){grid-column:auto}.designgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.designgrid .card{grid-column:auto}
 .card{border:1px solid #222;background:#101010;border-radius:18px;overflow:hidden;min-height:300px;display:flex;flex-direction:column;justify-content:end;position:relative;transition:.3s}
 .card:hover{transform:translateY(-5px);border-color:#3a3a3a}
-.video{height:330px;background:#050505;overflow:hidden;position:relative}
+.video{aspect-ratio:16/9;height:auto;background:#050505;overflow:hidden;position:relative}
 .video iframe{width:100%;height:100%;border:0;display:block}
 .card{cursor:pointer}
 .thumb:before{content:"▶";width:58px;height:58px;border:1px solid #777;border-radius:50%;display:grid;place-items:center;color:#ddd;font-size:15px}
 .cardbody{padding:20px 22px 23px}
-.cardbody h3{font-family:'Space Grotesk';font-size:22px}
+.cardbody h3{font-family:'Space Grotesk';font-size:22px}.cardbody p::before{content:'// ';color:var(--acid)}
 .cardbody p{color:#777;font-size:13px;margin-top:5px}
-.about{display:grid;grid-template-columns:1fr 1.3fr;gap:80px;border-top:1px solid #222}
+.about{display:grid;grid-template-columns:1fr 1.3fr;gap:80px;border-top:1px solid var(--line)}
 .aboutcopy{font-size:24px;line-height:1.35;color:#d5d2cc}
 .aboutcopy strong{color:#fff}
 .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-.tag{border:1px solid #292929;border-radius:100px;padding:9px 13px;color:#aaa;font-size:13px}
-.contact{border-top:1px solid #222;text-align:center;padding-bottom:130px}
+.tag{border:1px solid #292929;border-radius:3px;padding:9px 13px;color:#aaa;font-size:13px}.tag:hover{color:var(--acid);border-color:var(--acid)}
+.contact{border-top:1px solid var(--line);text-align:center;padding-bottom:130px}.contact-details{font-size:13px;color:#777;margin-top:24px}.contact-details a:hover{color:var(--acid)}
 .contact h2{max-width:800px;margin:0 auto 25px}
 .contact p{color:#888;margin-bottom:30px}
 footer{border-top:1px solid #222;padding:25px 0;color:#666;font-size:12px;display:flex;justify-content:space-between}
-@media(max-width:700px){.navlinks{display:none}.hero{min-height:80vh}.workgrid,.about{grid-template-columns:1fr}.about{gap:35px}.video{height:230px}section{padding:80px 0}}
+@media(max-width:700px){.navlinks a:not(.nav-cta){display:none}.hero{min-height:84vh}.hero:before{display:none}.hero-bottom{align-items:flex-start;flex-direction:column;gap:18px;margin-top:34px}.workgrid,.about,.designgrid{grid-template-columns:1fr}.workgrid .card,.designgrid .card{grid-column:auto}.about{gap:35px}section{padding:80px 0}.section-head{align-items:flex-start;gap:18px;flex-direction:column}.section-head>a{align-self:flex-start}.hero p{font-size:16px}.aboutcopy{font-size:20px}.contact .btn{margin:0 3px!important}.contact-links{grid-template-columns:1fr!important;text-align:center}}
 
 /* Premium cinematic video hover interactions */
 .workgrid{perspective:1200px}
@@ -57,7 +61,7 @@ footer{border-top:1px solid #222;padding:25px 0;color:#666;font-size:12px;displa
 .card::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 35%,rgba(255,255,255,.10) 50%,transparent 65%);transform:translateX(-130%);transition:transform .8s ease;z-index:4}
 .card:hover::after{transform:translateX(130%)}
 .card:hover{transform:translateY(-10px) scale(1.012);border-color:#555;box-shadow:0 22px 55px rgba(0,0,0,.45)}
-.video{height:330px;background:#050505;overflow:hidden;position:relative}
+.video{aspect-ratio:16/9;height:auto;background:#050505;overflow:hidden;position:relative}
 .video::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(to top,rgba(0,0,0,.38),transparent 42%);transition:opacity .4s}
 .video iframe{width:100%;height:100%;border:0;display:block;transform:scale(1.015);transition:transform .9s cubic-bezier(.2,.75,.2,1),filter .5s}
 .card:hover .video iframe{transform:scale(1.075);filter:brightness(1.08) contrast(1.04)}
@@ -65,30 +69,43 @@ footer{border-top:1px solid #222;padding:25px 0;color:#666;font-size:12px;displa
 .hoverhint i{width:30px;height:30px;border:1px solid rgba(255,255,255,.65);border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:9px;background:rgba(0,0,0,.28);backdrop-filter:blur(8px)}
 .card:hover .hoverhint{opacity:1;transform:translateY(0)}
 .cardbody{position:relative;z-index:6;background:#101010}
-@media(max-width:700px){.video{height:230px}.card:hover{transform:translateY(-4px) scale(1.005)}}
+@media(max-width:700px){.card:hover{transform:translateY(-4px) scale(1.005)}}
 @media (prefers-reduced-motion: reduce){.card,.video iframe,.card::after,.hoverhint{transition:none!important}}
 
 </style>
 </head>
 <body>
 <nav><div class="container navin">
-<div class="logo">VEDANT.</div>
-<div class="navlinks"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+<div class="logo">VEDANT<span>.</span></div>
+<div class="navlinks"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a><a class="nav-cta" href="mailto:chinchekarvedant@gmail.com">Let's talk</a></div>
 </div></nav>
 
 <header class="hero container">
-<div>
-<div class="kicker">Independent Video Editor · Content Creator · Visual Storyteller</div>
-<h1>Stories that<br><span>feel like something.</span></h1>
-<p>I create engaging video content with a focus on rhythm, storytelling and visual detail — from short-form social content and reels to polished client edits.</p>
+<div class="hero-content">
+<div class="kicker">Video Editor · Visual Designer · Pune, India</div>
+<h1>Video edits &amp;<br><span>visual stories.</span></h1>
+<p>I’m a video editor and visual designer creating engaging social content, reels, motion graphics and polished visual stories from Pune.</p>
 <a class="btn" href="#work">View selected work ↓</a>
 <a class="btn dark" href="https://vimeo.com/user220529074" target="_blank" style="margin-left:8px">Vimeo ↗</a>
+<div class="hero-bottom"><span class="availability"><b>●</b> Available for opportunities</span><span class="availability">Pune, India</span></div>
 </div>
 </header>
 
 <section id="work" class="container">
-<div class="section-head"><div><div class="eyebrow">01 — Selected Work</div><h2>Recent edits.</h2></div><a href="https://vimeo.com/user220529074" target="_blank" class="eyebrow">View all on Vimeo ↗</a></div>
+<div class="section-head"><div><div class="eyebrow">01 — Video Editing</div><h2>Cut to connect.</h2></div><a href="https://vimeo.com/user220529074" target="_blank" rel="noopener" class="eyebrow">View all on Vimeo ↗</a></div>
 <div class="workgrid">
+<a class="card" href="https://vimeo.com/952754457" target="_blank">
+  <div class="video"><iframe src="https://player.vimeo.com/video/952754457?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" loading="lazy"></iframe><div class="hoverhint"><i>▶</i> Hover to preview</div></div>
+  <div class="cardbody"><h3>Reels</h3><p>Short-form · Social media content</p></div>
+</a>
+<a class="card" href="https://vimeo.com/952756053" target="_blank">
+  <div class="video"><iframe src="https://player.vimeo.com/video/952756053?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" loading="lazy"></iframe><div class="hoverhint"><i>▶</i> Hover to preview</div></div>
+  <div class="cardbody"><h3>Logo Reveal</h3><p>Motion graphics · Client work</p></div>
+</a>
+<a class="card" href="https://vimeo.com/1222154545" target="_blank" rel="noopener">
+  <div class="video"><iframe src="https://player.vimeo.com/video/1222154545?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" loading="lazy"></iframe><div class="hoverhint"><i>▶</i> Hover to preview</div></div>
+  <div class="cardbody"><h3>Typography in Motion</h3><p>Short-form · AI voice-over · Editing</p></div>
+</a>
 <a class="card" href="https://vimeo.com/952765160" target="_blank">
   <div class="video"><iframe src="https://player.vimeo.com/video/952765160?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" loading="lazy"></iframe><div class="hoverhint"><i>▶</i> Hover to preview</div></div>
   <div class="cardbody"><h3>Creative Reel</h3><p>Showreel · Editing · Visual storytelling</p></div>
@@ -105,34 +122,44 @@ footer{border-top:1px solid #222;padding:25px 0;color:#666;font-size:12px;displa
   <div class="video"><iframe src="https://player.vimeo.com/video/952763181?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" loading="lazy"></iframe><div class="hoverhint"><i>▶</i> Hover to preview</div></div>
   <div class="cardbody"><h3>Cinematography</h3><p>Visual storytelling · Cinematic work</p></div>
 </a>
-<a class="card" href="https://vimeo.com/952754457" target="_blank">
-  <div class="video"><iframe src="https://player.vimeo.com/video/952754457?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" loading="lazy"></iframe><div class="hoverhint"><i>▶</i> Hover to preview</div></div>
-  <div class="cardbody"><h3>Reels</h3><p>Short-form · Social media content</p></div>
-</a>
-<a class="card" href="https://vimeo.com/952756053" target="_blank">
-  <div class="video"><iframe src="https://player.vimeo.com/video/952756053?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" loading="lazy"></iframe><div class="hoverhint"><i>▶</i> Hover to preview</div></div>
-  <div class="cardbody"><h3>Logo Reveal</h3><p>Motion graphics · Client work</p></div>
-</a>
+</div>
+</section>
+
+<section id="design" class="container">
+<div class="section-head"><div><div class="eyebrow">02 — Design &amp; Motion</div><h2>Built to be seen.</h2></div></div>
+<div class="workgrid designgrid">
+<a class="card" href="https://vimeo.com/952763620" target="_blank" rel="noopener"><div class="video"><iframe src="https://player.vimeo.com/video/952763620?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" loading="lazy"></iframe><div class="hoverhint"><i>▶</i> Hover to preview</div></div><div class="cardbody"><h3>Thumbnail Stories</h3><p>Visual design · Content presentation</p></div></a>
+<a class="card" href="https://vimeo.com/952756053" target="_blank" rel="noopener"><div class="video"><iframe src="https://player.vimeo.com/video/952756053?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" loading="lazy"></iframe><div class="hoverhint"><i>▶</i> Hover to preview</div></div><div class="cardbody"><h3>Brand in Motion</h3><p>Logo reveal · After Effects · Motion graphics</p></div></a>
+<a class="card" href="https://vimeo.com/952754457" target="_blank" rel="noopener"><div class="video"><iframe src="https://player.vimeo.com/video/952754457?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" loading="lazy"></iframe><div class="hoverhint"><i>▶</i> Hover to preview</div></div><div class="cardbody"><h3>Graphic Rhythm</h3><p>Motion graphics · Visual design</p></div></a>
+<a class="card" href="https://vimeo.com/952764258" target="_blank" rel="noopener"><div class="video"><iframe src="https://player.vimeo.com/video/952764258?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" loading="lazy"></iframe><div class="hoverhint"><i>▶</i> Hover to preview</div></div><div class="cardbody"><h3>Moments in Type</h3><p>Invitation design · Visual storytelling</p></div></a>
 </div>
 </section>
 
 <section id="about" class="container about">
-<div><div class="eyebrow">02 — About</div><h2 style="margin-top:12px">A creative<br>mind behind<br>the timeline.</h2></div>
+<div><div class="eyebrow">03 — About</div><h2 style="margin-top:12px">A creative<br>mind behind<br>the timeline.</h2></div>
 <div class="aboutcopy">
-I’m <strong>Vedant Chinchekar</strong>, a video editor and content creator interested in turning raw footage into content people actually want to watch.
+I’m <strong>Vedant Chinchekar</strong>, a video editor and visual designer based in Pune. I turn raw footage and creative ideas into content people actually want to watch.
 <br><br>
-I enjoy working across <strong>social media, short-form video, storytelling and visual content</strong>, with an eye for pacing, music, transitions and clean visual language.
+I work across <strong>social media, short-form video, storytelling, motion graphics and visual design</strong>, with an eye for pacing, music, transitions and clean visual language.
 <div class="skills">
-<span class="tag">Video Editing</span><span class="tag">Social Media</span><span class="tag">Reels</span><span class="tag">Content Creation</span><span class="tag">Storytelling</span><span class="tag">Sound</span>
+<span class="tag">Premiere Pro</span><span class="tag">DaVinci Resolve</span><span class="tag">After Effects</span><span class="tag">Photoshop</span><span class="tag">CapCut</span><span class="tag">Video Editing</span><span class="tag">Motion Graphics</span><span class="tag">Social Media</span><span class="tag">Reels</span><span class="tag">Sound Design</span>
 </div>
 </div>
 </section>
 
 <section id="contact" class="container contact">
-<div class="eyebrow">03 — Let's work</div>
+<div class="eyebrow">04 — Let's work</div>
 <h2>Have a story worth telling?</h2>
-<p>I'm open to internships, freelance projects and creative collaborations.</p>
-<a class="btn" href="https://vimeo.com/user220529074" target="_blank">View my portfolio ↗</a>
+<p>I'm open to internships, freelance projects and creative collaborations in Pune and beyond.</p>
+<a class="btn" href="mailto:chinchekarvedant@gmail.com">Email me ↗</a>
+<a class="btn dark" href="https://vimeo.com/user220529074" target="_blank" style="margin-left:8px">View my portfolio ↗</a>
+<div class="contact-links" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:850px;margin:30px auto 0;text-align:left">
+<a class="tag" href="mailto:chinchekarvedant@gmail.com">Email<br><strong>chinchekarvedant@gmail.com</strong></a>
+<a class="tag" href="tel:+918830677618">Phone<br><strong>+91 88306 77618</strong></a>
+<a class="tag" href="https://in.linkedin.com/in/vedant-chinchekar-0b703a208" target="_blank" rel="noopener">LinkedIn<br><strong>Connect with me ↗</strong></a>
+<a class="tag" href="https://drive.google.com/file/d/10h15rsjsD2_BTmoiL-CVlJbrN_Q0ttFP/view" target="_blank" rel="noopener">Resume<br><strong>View resume ↗</strong></a>
+</div>
+<p class="contact-details">Pune, India · Available for internships, freelance projects and creative collaborations</p>
 </section>
 
 <footer class="container">
